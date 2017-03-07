@@ -23,10 +23,10 @@ class ViewController: UIViewController {
 
     // stackviewにviewを追加する
     private func addSubview(){
-        let tes = UILabel()
-        tes.text = "aaa"
-        tes.textColor = UIColor.black
-        stackView.addArrangedSubview(tes)
+        let label = UILabel()
+        label.text = "aaa"
+        label.textColor = UIColor.black
+        stackView.addArrangedSubview(label)
     }
     
     // stackviewから指定したviewを除去する
@@ -36,18 +36,18 @@ class ViewController: UIViewController {
     
     // ビューを並べる方向を設定する
     private func getAxis(){
-        print(stackView.axis = .vertical)
+        stackView.axis = .vertical
     }
     
     // ビュー同士の間隔を設定する
     private func setSpace(){
-        print(stackView.spacing = 5)
+        stackView.spacing = 5
 
     }
     
     // 軸に沿ったビューの配置方法を設定する
     private func setDistribution(){
-        print(stackView.distribution = .fillEqually)
+        stackView.distribution = .fillEqually
     }
 
 }
