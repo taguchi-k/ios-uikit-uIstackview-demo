@@ -11,10 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         getAxis()
         setSpace()
         addSubview()
@@ -22,33 +22,31 @@ class ViewController: UIViewController {
     }
 
     // stackviewにviewを追加する
-    private func addSubview(){
+    private func addSubview() {
         let label = UILabel()
         label.text = "aaa"
-        label.textColor = UIColor.black
+        label.textColor = .white
+        label.backgroundColor = .lightGray
         stackView.addArrangedSubview(label)
     }
-    
+
     // stackviewから指定したviewを除去する
-    private func removeSubview(){
+    private func removeSubview() {
         stackView.removeArrangedSubview(stackView.subviews.first!)
     }
-    
+
     // ビューを並べる方向を設定する
-    private func getAxis(){
+    private func getAxis() {
         stackView.axis = .vertical
     }
-    
-    // ビュー同士の間隔を設定する
-    private func setSpace(){
-        stackView.spacing = 5
 
+    // ビュー同士の間隔を設定する
+    private func setSpace() {
+        stackView.spacing = 5
     }
-    
+
     // 軸に沿ったビューの配置方法を設定する
-    private func setDistribution(){
+    private func setDistribution() {
         stackView.distribution = .fillEqually
     }
-
 }
-
